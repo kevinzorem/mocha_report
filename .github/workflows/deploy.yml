@@ -23,6 +23,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-          publish_dir: mochawesome-report
+          deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          allow_empty_commit: true
+          publish_dir: ./mochawesome-report
           publish_branch: gh-pages
-          repository: kevinzorem/allure_report
+          external_repository: kevinzorem/allure_report
