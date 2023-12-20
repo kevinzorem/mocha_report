@@ -1,0 +1,229 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-12-20T15:44:06.687Z",
+    "end": "2023-12-20T15:44:35.913Z",
+    "duration": 29226,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "206f59ad-88a1-47da-9f6e-deffaf1b869c",
+      "title": "",
+      "fullFile": "cypress/e2e/specs/02_filterSpec.cy.js",
+      "file": "cypress/e2e/specs/02_filterSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8f5454f-6ef4-4f11-99e8-4c7eab1628ca",
+          "title": "03.can filter cases by one key correct",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "enter to web and login",
+              "fullTitle": "03.can filter cases by one key correct enter to web and login",
+              "timedOut": null,
+              "duration": 7429,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearAllCookies();\nloginStepDefinition.goLoginPage();\nloginStepDefinition.login();",
+              "err": {},
+              "uuid": "36cd4c84-7cba-4d08-8e3e-4babda9f8325",
+              "parentUUID": "a8f5454f-6ef4-4f11-99e8-4c7eab1628ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "enter to filter page",
+              "fullTitle": "03.can filter cases by one key correct enter to filter page",
+              "timedOut": null,
+              "duration": 2800,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "tablePage.navigateTablePage();",
+              "err": {},
+              "uuid": "076e2bdb-e6de-484f-b2c9-5aaa21db7ac1",
+              "parentUUID": "a8f5454f-6ef4-4f11-99e8-4c7eab1628ca",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "can perform a search and succesfully obtain results",
+              "fullTitle": "03.can filter cases by one key correct can perform a search and succesfully obtain results",
+              "timedOut": null,
+              "duration": 3021,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "tablePage.searchQuery(\"2000\");\ntablePage.validateMatches(\"2000\");\nloginStepDefinition.goLoginPage();",
+              "err": {},
+              "uuid": "2550aa26-da7e-47f9-8477-2fdfb32e90c8",
+              "parentUUID": "a8f5454f-6ef4-4f11-99e8-4c7eab1628ca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36cd4c84-7cba-4d08-8e3e-4babda9f8325",
+            "076e2bdb-e6de-484f-b2c9-5aaa21db7ac1",
+            "2550aa26-da7e-47f9-8477-2fdfb32e90c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13250,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "04eea212-e345-4cb6-a5b2-3c5acd9b78ce",
+          "title": "04.can filter cases by one key incorrect",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "enter to web and login",
+              "fullTitle": "04.can filter cases by one key incorrect enter to web and login",
+              "timedOut": null,
+              "duration": 2952,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clearAllCookies();\nloginStepDefinition.goLoginPage();\nloginStepDefinition.login();",
+              "err": {},
+              "uuid": "46c143b0-50be-4b54-afc6-f2ea2163ddec",
+              "parentUUID": "04eea212-e345-4cb6-a5b2-3c5acd9b78ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "enter to filter page",
+              "fullTitle": "04.can filter cases by one key incorrect enter to filter page",
+              "timedOut": null,
+              "duration": 1364,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "tablePage.navigateTablePage();",
+              "err": {},
+              "uuid": "15a4c673-89e4-4a71-8d70-ff94e073e21b",
+              "parentUUID": "04eea212-e345-4cb6-a5b2-3c5acd9b78ce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "can perform a search and the results should not match",
+              "fullTitle": "04.can filter cases by one key incorrect can perform a search and the results should not match",
+              "timedOut": null,
+              "duration": 11192,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/02_filterSpec.cy.js/04.can filter cases by one key incorrect -- can perform a search and the results should not match (failed).png\"",
+              "code": "tablePage.searchQuery(\"2000\");\ntablePage.validateMatches(\"abc\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected '<div.rt-tr-group>' to contain 'abc'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected '<div.rt-tr-group>' to contain 'abc'\n    at eval (webpack://base_fmrk_cypress/./cypress/e2e/pages/tablePage.js:45:35)\n    at Context.eval (webpack://base_fmrk_cypress/./cypress/e2e/pages/tablePage.js:44:18)",
+                "diff": null
+              },
+              "uuid": "537d21bc-a17c-44b1-b994-76080e119438",
+              "parentUUID": "04eea212-e345-4cb6-a5b2-3c5acd9b78ce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "46c143b0-50be-4b54-afc6-f2ea2163ddec",
+            "15a4c673-89e4-4a71-8d70-ff94e073e21b"
+          ],
+          "failures": [
+            "537d21bc-a17c-44b1-b994-76080e119438"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15508,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}

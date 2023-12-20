@@ -1,0 +1,196 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2023-12-20T15:43:39.576Z",
+    "end": "2023-12-20T15:44:04.031Z",
+    "duration": 24455,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d8bfc07-6ed8-4550-b0c8-c5a844fa1e68",
+      "title": "",
+      "fullFile": "cypress/e2e/specs/01_filesSpec.cy.js",
+      "file": "cypress/e2e/specs/01_filesSpec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "98c599b9-c4d6-4cea-baa4-fae45fcbdb60",
+          "title": "01.Uploading a file succesfully",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "go to upload files",
+              "fullTitle": "01.Uploading a file succesfully go to upload files",
+              "timedOut": null,
+              "duration": 1098,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "uploadFilePage.goUploadFilePage(); // Navigate to the file upload page before each test\ncy.fixture('elements').then(elements => {\n  webElement = elements;\n});",
+              "err": {},
+              "uuid": "fd2e0784-06c8-4cb7-ba62-e55726a710d9",
+              "parentUUID": "98c599b9-c4d6-4cea-baa4-fae45fcbdb60",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uploads a file and clicks the upload button",
+              "fullTitle": "01.Uploading a file succesfully Uploads a file and clicks the upload button",
+              "timedOut": null,
+              "duration": 10744,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/01_filesSpec.cy.js/01.Uploading a file succesfully -- Uploads a file and clicks the upload button (failed).png\"",
+              "code": "cy.intercept('POST', 'https://exif.tools/upload.php').as('fileUpload'); // Intercept the POST request to the specified URL and assign it an alias\nuploadFilePage.upload(webElement.uploadFileInput, '00001_200114_cilcn_mager_zyl0_fe1_DiagRA_1.xml');\nuploadFilePage.clickOnUpload(webElement.uploadFileButton);\nuploadFilePage.interceptResponse();\nuploadFilePage.validateMetadata(webElement);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected '<td>' to contain '189 bytes'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected '<td>' to contain '189 bytes'\n    at Context.eval (webpack://base_fmrk_cypress/./cypress/e2e/pages/uploadFilePage.js:29:36)",
+                "diff": null
+              },
+              "uuid": "756bd139-7c3a-4bad-9fd8-c49c1207e075",
+              "parentUUID": "98c599b9-c4d6-4cea-baa4-fae45fcbdb60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fd2e0784-06c8-4cb7-ba62-e55726a710d9"
+          ],
+          "failures": [
+            "756bd139-7c3a-4bad-9fd8-c49c1207e075"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11842,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "6a22a81a-e8d8-4712-bc88-e6cb109bb3ee",
+          "title": "02.Uploading a file unsuccesfully",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "go to upload files",
+              "fullTitle": "02.Uploading a file unsuccesfully go to upload files",
+              "timedOut": null,
+              "duration": 90,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "uploadFilePage.goUploadFilePage(); // Navigate to the file upload page before each test\ncy.fixture('elements').then(elements => {\n  webElement = elements;\n});",
+              "err": {},
+              "uuid": "b7320761-895c-497b-8ca8-25e8d7513213",
+              "parentUUID": "6a22a81a-e8d8-4712-bc88-e6cb109bb3ee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uploads a file and clicks the upload button",
+              "fullTitle": "02.Uploading a file unsuccesfully Uploads a file and clicks the upload button",
+              "timedOut": null,
+              "duration": 10491,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"assets/01_filesSpec.cy.js/02.Uploading a file unsuccesfully -- Uploads a file and clicks the upload button (failed).png\"",
+              "code": "cy.intercept('POST', 'https://exif.tools/upload.php').as('fileUpload');\nuploadFilePage.upload(webElement.uploadFileInput, 'report-8728494985452779519.xml');\nuploadFilePage.clickOnUpload(webElement.uploadFileButton);\nuploadFilePage.interceptResponse();\nuploadFilePage.validateMetadata(webElement);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected '<div.jumbotron>' to contain '00001_200114_cilcn_mager_zyl0_fe1_DiagRA_1.xml'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected '<div.jumbotron>' to contain '00001_200114_cilcn_mager_zyl0_fe1_DiagRA_1.xml'\n    at Context.eval (webpack://base_fmrk_cypress/./cypress/e2e/pages/uploadFilePage.js:28:32)",
+                "diff": null
+              },
+              "uuid": "e249478b-6426-4b37-b11f-bf443fa8b04d",
+              "parentUUID": "6a22a81a-e8d8-4712-bc88-e6cb109bb3ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b7320761-895c-497b-8ca8-25e8d7513213"
+          ],
+          "failures": [
+            "e249478b-6426-4b37-b11f-bf443fa8b04d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 10581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
