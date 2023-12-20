@@ -1,0 +1,9 @@
+#Node.js
+node_modules/
+
+#Cypress
+reports/
+screenshots/
+downloads/
+videos/
+mochawesome-report/
